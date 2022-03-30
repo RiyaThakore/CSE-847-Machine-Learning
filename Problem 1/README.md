@@ -1,1 +1,1 @@
-Script: run LogReg.py
+Script: run logreg.py
