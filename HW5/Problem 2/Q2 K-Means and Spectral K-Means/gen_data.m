@@ -1,6 +1,6 @@
-function data = random_data(n)
-    mu = [1 2;-3 -5; -4 3; 4 -4; 10 10; -10 10];
-    sigma = [3 3];
-    gm = gmdistribution(mu,sigma);
-    data = random(gm, n);
+function data = gen_data(n)
+    x1 = [11 12;-13 -15; -14 13; 4 -4; 10 10; -10 10];
+    y1 = [2 2];
+    d = gmdistribution(x1,y1);
+    data = gen_data(d, n);
 end
