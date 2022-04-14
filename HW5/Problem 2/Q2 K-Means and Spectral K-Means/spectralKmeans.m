@@ -1,8 +1,8 @@
-function [c, pt] = spectral_kmeans(d, k, i)
+function [c, pt] = spectralKmeans(d, k, i)
     [n1, d] = size(d);
     d = d';
-    gram_matrix = d' * d;
-    [n2, D] = eig(gram_matrix);
+    A = d' * d;
+    [n2, D] = eig(A);
     vectors = n2(:, (end-(k-1)):end);
     [c, pt] = kmeans(vectors, k, i);
 end
